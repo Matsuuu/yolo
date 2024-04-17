@@ -1,4 +1,6 @@
 import { setupCounter } from './counter.js'
+import "./supabase.js";
+import { supabase } from './supabase.js';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -13,3 +15,15 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+
+async function callSupabase() {
+    const foo = await supabase.from("clicks")
+        .select()
+        .eq("id", 1)
+        .limit(1)
+        .single();
+    console.log(foo);
+}
+
+callSupabase();

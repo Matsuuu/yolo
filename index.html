@@ -2,11 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script
-      async
-      src="https://ga.jspm.io/npm:es-module-shims@1.9.0/dist/es-module-shims.js"
-      crossorigin="anonymous"
-    ></script>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.9.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@supabase/supabase-js": "https://ga.jspm.io/npm:@supabase/supabase-js@2.42.4/dist/module/index.js"
+      },
+      "scopes": {
+        "https://ga.jspm.io/": {
+          "@supabase/auth-js": "https://ga.jspm.io/npm:@supabase/auth-js@2.63.0/dist/module/index.js",
+          "@supabase/functions-js": "https://ga.jspm.io/npm:@supabase/functions-js@2.3.0/dist/module/index.js",
+          "@supabase/node-fetch": "https://ga.jspm.io/npm:@supabase/node-fetch@2.6.15/browser.js",
+          "@supabase/postgrest-js": "https://ga.jspm.io/npm:@supabase/postgrest-js@1.15.2/dist/module/index.js",
+          "@supabase/realtime-js": "https://ga.jspm.io/npm:@supabase/realtime-js@2.9.4/dist/module/index.js",
+          "@supabase/storage-js": "https://ga.jspm.io/npm:@supabase/storage-js@2.5.5/dist/module/index.js",
+          "ws": "https://ga.jspm.io/npm:ws@8.16.0/browser.js"
+        }
+      }
+    }
+    </script>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
